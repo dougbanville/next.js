@@ -13,16 +13,18 @@ const Index = props => (
       }}
     />
     <h1>Beers!</h1>
-    <ul>
+    <div className="grid-container">
       {props.beers.map(beer => (
-        <li key={beer.id}>
-          <img src={`${beer.image_url}`} />
-          <Link as={`/p/${beer.id}`} href={`/post?id=${beer.id}`}>
-            <a>{beer.name}</a>
-          </Link>
-        </li>
+        <div className="grid-x grid-margin-x" key={beer.id}>
+          <div className="cell small-12 large-6" key={beer.id}>
+            <img src={`${beer.image_url}`} />
+            <Link as={`/p/${beer.id}`} href={`/post?id=${beer.id}`}>
+              <a>{beer.name}</a>
+            </Link>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
     <style jsx>{`
       img {
         max-height: 100px;

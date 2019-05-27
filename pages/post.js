@@ -2,6 +2,7 @@ import { withRouter } from "next/router";
 import Layout from "../components/MyLayout.js";
 import fetch from "isomorphic-unfetch";
 import NextSeo from "next-seo";
+import MyBeer from "../components/MyBeer.js";
 
 const Post = props => (
   <Layout>
@@ -24,16 +25,7 @@ const Post = props => (
         }
       }}
     />
-    <h1>{props.beer.name}</h1>
-    <img src={props.beer.image_url} />
-    <p>{props.beer.description}</p>
-
-    <style jsx>{`
-      img {
-        max-height: 200px;
-        float: left;
-      }
-    `}</style>
+    <MyBeer beer={props.beer} />
   </Layout>
 );
 

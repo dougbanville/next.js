@@ -9094,7 +9094,12 @@ function (_App) {
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_8__["Container"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("audio", {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_8__["Container"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.css",
+        integrity: "sha256-Ed7kL1p/BVuHCwGSEpUib2v9K7JtkCQlX4CweQEimJo=",
+        crossOrigin: "anonymous"
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("audio", {
         controls: true
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("source", {
         src: "https://dcs.megaphone.fm/DGT9945806008.mp3?key=7e5795b0ef864715055c7b6e77072571"
