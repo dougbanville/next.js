@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/post.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
 /***/ "./components/Header.js":
 /*!******************************!*\
@@ -32,6 +32,37 @@ var Header = function Header() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./components/MyBeer.js":
+/*!******************************!*\
+  !*** ./components/MyBeer.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var MyBeer = function MyBeer(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: props.beer.id
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "".concat(beer.image_url)
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    as: "/p/".concat(beer.id),
+    href: "/post?id=".concat(beer.id)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, beer.name)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MyBeer);
 
 /***/ }),
 
@@ -6413,21 +6444,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpost&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Fpost.js!./":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpost&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Fpost.js ***!
-  \********************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Findex.js!./":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Findex.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/post", function() {
-      var page = __webpack_require__(/*! ./pages/post.js */ "./pages/post.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
+      var page = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/post.js */ "./pages/post.js", function() {
-          if(!next.router.components["/post"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/post.js */ "./pages/post.js")
-          next.router.update("/post", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
+          if(!next.router.components["/"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+          next.router.update("/", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -11630,10 +11661,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/post.js":
-/*!***********************!*\
-  !*** ./pages/post.js ***!
-  \***********************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11646,13 +11677,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
+/* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next-seo */ "./node_modules/next-seo/dist/index.js");
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_MyBeer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/MyBeer */ "./components/MyBeer.js");
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next-seo */ "./node_modules/next-seo/dist/index.js");
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -11662,94 +11694,81 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Post = function Post(props) {
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_seo__WEBPACK_IMPORTED_MODULE_7___default.a, {
+
+var Index = function Index(props) {
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_seo__WEBPACK_IMPORTED_MODULE_8___default.a, {
     config: {
-      title: props.beer.name,
-      description: props.beer.tagline,
-      canonical: "https://hello-next.dougbanville.now.sh/",
-      openGraph: {
-        url: "https://www.url.ie/a",
-        title: props.beer.name,
-        description: props.beer.tagline,
-        images: [{
-          url: props.beer.image_url
-        }],
-        site_name: "Doug Loves Punk"
-      },
-      twitter: {
-        handle: "@dougbanville",
-        site: "@site",
-        cardType: "summary_large_image"
-      }
+      title: "Simple Usage Example",
+      description: "A short description goes here."
     }
   }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
-    className: "jsx-557742157"
-  }, props.beer.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
-    src: props.beer.image_url,
-    className: "jsx-557742157"
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "jsx-557742157"
-  }, props.beer.description), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    id: "557742157"
-  }, "img.jsx-557742157{max-height:200px;float:left;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvbmV4dC5qcy9wYWdlcy9wb3N0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThCZ0IsQUFHMEIsaUJBQ04sV0FDYiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL25leHQuanMvcGFnZXMvcG9zdC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHdpdGhSb3V0ZXIgfSBmcm9tIFwibmV4dC9yb3V0ZXJcIjtcbmltcG9ydCBMYXlvdXQgZnJvbSBcIi4uL2NvbXBvbmVudHMvTXlMYXlvdXQuanNcIjtcbmltcG9ydCBmZXRjaCBmcm9tIFwiaXNvbW9ycGhpYy11bmZldGNoXCI7XG5pbXBvcnQgTmV4dFNlbyBmcm9tIFwibmV4dC1zZW9cIjtcblxuY29uc3QgUG9zdCA9IHByb3BzID0+IChcbiAgPExheW91dD5cbiAgICA8TmV4dFNlb1xuICAgICAgY29uZmlnPXt7XG4gICAgICAgIHRpdGxlOiBwcm9wcy5iZWVyLm5hbWUsXG4gICAgICAgIGRlc2NyaXB0aW9uOiBwcm9wcy5iZWVyLnRhZ2xpbmUsXG4gICAgICAgIGNhbm9uaWNhbDogXCJodHRwczovL2hlbGxvLW5leHQuZG91Z2JhbnZpbGxlLm5vdy5zaC9cIixcbiAgICAgICAgb3BlbkdyYXBoOiB7XG4gICAgICAgICAgdXJsOiBcImh0dHBzOi8vd3d3LnVybC5pZS9hXCIsXG4gICAgICAgICAgdGl0bGU6IHByb3BzLmJlZXIubmFtZSxcbiAgICAgICAgICBkZXNjcmlwdGlvbjogcHJvcHMuYmVlci50YWdsaW5lLFxuICAgICAgICAgIGltYWdlczogW3sgdXJsOiBwcm9wcy5iZWVyLmltYWdlX3VybCB9XSxcbiAgICAgICAgICBzaXRlX25hbWU6IFwiRG91ZyBMb3ZlcyBQdW5rXCJcbiAgICAgICAgfSxcbiAgICAgICAgdHdpdHRlcjoge1xuICAgICAgICAgIGhhbmRsZTogXCJAZG91Z2JhbnZpbGxlXCIsXG4gICAgICAgICAgc2l0ZTogXCJAc2l0ZVwiLFxuICAgICAgICAgIGNhcmRUeXBlOiBcInN1bW1hcnlfbGFyZ2VfaW1hZ2VcIlxuICAgICAgICB9XG4gICAgICB9fVxuICAgIC8+XG4gICAgPGgxPntwcm9wcy5iZWVyLm5hbWV9PC9oMT5cbiAgICA8aW1nIHNyYz17cHJvcHMuYmVlci5pbWFnZV91cmx9IC8+XG4gICAgPHA+e3Byb3BzLmJlZXIuZGVzY3JpcHRpb259PC9wPlxuXG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgaW1nIHtcbiAgICAgICAgbWF4LWhlaWdodDogMjAwcHg7XG4gICAgICAgIGZsb2F0OiBsZWZ0O1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgPC9MYXlvdXQ+XG4pO1xuXG5Qb3N0LmdldEluaXRpYWxQcm9wcyA9IGFzeW5jIGZ1bmN0aW9uKGNvbnRleHQpIHtcbiAgY29uc29sZS5sb2coY29udGV4dC5xdWVyeSk7XG4gIGNvbnN0IHsgaWQgfSA9IGNvbnRleHQucXVlcnk7XG4gIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKGBodHRwczovL2FwaS5wdW5rYXBpLmNvbS92Mi9iZWVycy8ke2lkfWApO1xuICBjb25zdCBiZWVycyA9IGF3YWl0IHJlcy5qc29uKCk7XG4gIGNvbnN0IGJlZXIgPSBiZWVyc1swXTtcbiAgY29uc29sZS5sb2coYmVlcik7XG4gIGNvbnNvbGUubG9nKGBGZXRjaGVkIGJlZXI6ICR7YmVlci5uYW1lfWApO1xuXG4gIHJldHVybiB7IGJlZXIgfTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IHdpdGhSb3V0ZXIoUG9zdCk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/next.js/pages/post.js */"));
+    className: "jsx-2867480869"
+  }, "Beers!"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "jsx-2867480869"
+  }, props.beers.map(function (beer) {
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      key: beer.id,
+      className: "jsx-2867480869"
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
+      src: "".concat(beer.image_url),
+      className: "jsx-2867480869"
+    }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      as: "/p/".concat(beer.id),
+      href: "/post?id=".concat(beer.id)
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+      className: "jsx-2867480869"
+    }, beer.name)));
+  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    id: "2867480869"
+  }, "img.jsx-2867480869{max-height:100px;float:left;}h1.jsx-2867480869,a.jsx-2867480869{font-family:\"Arial\";}ul.jsx-2867480869{padding:0;}li.jsx-2867480869{list-style:none;margin:5px 0;height:120px;}a.jsx-2867480869{-webkit-text-decoration:none;text-decoration:none;color:blue;}a.jsx-2867480869:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvbmV4dC5qcy9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF5QmdCLEFBRzBCLEFBS0csQUFJVixBQUlNLEFBTUssQUFLVCxVQWRkLEVBZUEsSUFYZSxDQWJGLEdBS2IsUUFKQSxDQWFlLGFBQ2YsUUFJYSxXQUNiIiwiZmlsZSI6Ii9Vc2Vycy9kb3VnYmFudmlsbGUvbmV4dC5qcy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMYXlvdXQgZnJvbSBcIi4uL2NvbXBvbmVudHMvTXlMYXlvdXQuanNcIjtcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcbmltcG9ydCBmZXRjaCBmcm9tIFwiaXNvbW9ycGhpYy11bmZldGNoXCI7XG5pbXBvcnQgTXlCZWVyIGZyb20gXCIuLi9jb21wb25lbnRzL015QmVlclwiO1xuaW1wb3J0IE5leHRTZW8gZnJvbSBcIm5leHQtc2VvXCI7XG5cbmNvbnN0IEluZGV4ID0gcHJvcHMgPT4gKFxuICA8TGF5b3V0PlxuICAgIDxOZXh0U2VvXG4gICAgICBjb25maWc9e3tcbiAgICAgICAgdGl0bGU6IFwiU2ltcGxlIFVzYWdlIEV4YW1wbGVcIixcbiAgICAgICAgZGVzY3JpcHRpb246IFwiQSBzaG9ydCBkZXNjcmlwdGlvbiBnb2VzIGhlcmUuXCJcbiAgICAgIH19XG4gICAgLz5cbiAgICA8aDE+QmVlcnMhPC9oMT5cbiAgICA8dWw+XG4gICAgICB7cHJvcHMuYmVlcnMubWFwKGJlZXIgPT4gKFxuICAgICAgICA8bGkga2V5PXtiZWVyLmlkfT5cbiAgICAgICAgICA8aW1nIHNyYz17YCR7YmVlci5pbWFnZV91cmx9YH0gLz5cbiAgICAgICAgICA8TGluayBhcz17YC9wLyR7YmVlci5pZH1gfSBocmVmPXtgL3Bvc3Q/aWQ9JHtiZWVyLmlkfWB9PlxuICAgICAgICAgICAgPGE+e2JlZXIubmFtZX08L2E+XG4gICAgICAgICAgPC9MaW5rPlxuICAgICAgICA8L2xpPlxuICAgICAgKSl9XG4gICAgPC91bD5cbiAgICA8c3R5bGUganN4PntgXG4gICAgICBpbWcge1xuICAgICAgICBtYXgtaGVpZ2h0OiAxMDBweDtcbiAgICAgICAgZmxvYXQ6IGxlZnQ7XG4gICAgICB9XG4gICAgICBoMSxcbiAgICAgIGEge1xuICAgICAgICBmb250LWZhbWlseTogXCJBcmlhbFwiO1xuICAgICAgfVxuXG4gICAgICB1bCB7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICB9XG5cbiAgICAgIGxpIHtcbiAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcbiAgICAgICAgbWFyZ2luOiA1cHggMDtcbiAgICAgICAgaGVpZ2h0OiAxMjBweDtcbiAgICAgIH1cblxuICAgICAgYSB7XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgY29sb3I6IGJsdWU7XG4gICAgICB9XG5cbiAgICAgIGE6aG92ZXIge1xuICAgICAgICBvcGFjaXR5OiAwLjY7XG4gICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8L0xheW91dD5cbik7XG5cbkluZGV4LmdldEluaXRpYWxQcm9wcyA9IGFzeW5jIGZ1bmN0aW9uKCkge1xuICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChcbiAgICBcImh0dHBzOi8vYXBpLnB1bmthcGkuY29tL3YyL2JlZXJzP3BhZ2U9MiZwZXJfcGFnZT04MFwiXG4gICk7XG4gIGNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpO1xuXG4gIGNvbnNvbGUubG9nKGBTaG93IGRhdGEgZmV0Y2hlZC4gQ291bnQ6ICR7ZGF0YS5sZW5ndGh9YCk7XG5cbiAgcmV0dXJuIHtcbiAgICBiZWVyczogZGF0YS5tYXAoZW50cnkgPT4gZW50cnkpXG4gIH07XG59O1xuXG5leHBvcnQgZGVmYXVsdCBJbmRleDtcbiJdfQ== */\n/*@ sourceURL=/Users/dougbanville/next.js/pages/index.js */"));
 };
 
-Post.getInitialProps =
+Index.getInitialProps =
 /*#__PURE__*/
-function () {
-  var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(context) {
-    var id, res, beers, beer;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            console.log(context.query);
-            id = context.query.id;
-            _context.next = 4;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()("https://api.punkapi.com/v2/beers/".concat(id));
+Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+/*#__PURE__*/
+_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+  var res, data;
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()("https://api.punkapi.com/v2/beers?page=2&per_page=80");
 
-          case 4:
-            res = _context.sent;
-            _context.next = 7;
-            return res.json();
+        case 2:
+          res = _context.sent;
+          _context.next = 5;
+          return res.json();
 
-          case 7:
-            beers = _context.sent;
-            beer = beers[0];
-            console.log(beer);
-            console.log("Fetched beer: ".concat(beer.name));
-            return _context.abrupt("return", {
-              beer: beer
-            });
+        case 5:
+          data = _context.sent;
+          console.log("Show data fetched. Count: ".concat(data.length));
+          return _context.abrupt("return", {
+            beers: data.map(function (entry) {
+              return entry;
+            })
+          });
 
-          case 12:
-          case "end":
-            return _context.stop();
-        }
+        case 8:
+        case "end":
+          return _context.stop();
       }
-    }, _callee);
-  }));
-
-  return function (_x) {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(Post));
+    }
+  }, _callee);
+}));
+/* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 0:
-/*!************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fpost&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Fpost.js ***!
-  \************************************************************************************************************************/
+/***/ 1:
+/*!*********************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Findex.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fpost&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Fpost.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpost&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Fpost.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fdougbanville%2Fnext.js%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -11765,5 +11784,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=post.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=index.js.map

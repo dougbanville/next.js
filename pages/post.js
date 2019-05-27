@@ -1,9 +1,29 @@
 import { withRouter } from "next/router";
 import Layout from "../components/MyLayout.js";
 import fetch from "isomorphic-unfetch";
+import NextSeo from "next-seo";
 
 const Post = props => (
   <Layout>
+    <NextSeo
+      config={{
+        title: props.beer.name,
+        description: props.beer.tagline,
+        canonical: "https://hello-next.dougbanville.now.sh/",
+        openGraph: {
+          url: "https://www.url.ie/a",
+          title: props.beer.name,
+          description: props.beer.tagline,
+          images: [{ url: props.beer.image_url }],
+          site_name: "Doug Loves Punk"
+        },
+        twitter: {
+          handle: "@dougbanville",
+          site: "@site",
+          cardType: "summary_large_image"
+        }
+      }}
+    />
     <h1>{props.beer.name}</h1>
     <img src={props.beer.image_url} />
     <p>{props.beer.description}</p>

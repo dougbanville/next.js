@@ -2,9 +2,16 @@ import Layout from "../components/MyLayout.js";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import MyBeer from "../components/MyBeer";
+import NextSeo from "next-seo";
 
 const Index = props => (
   <Layout>
+    <NextSeo
+      config={{
+        title: "Simple Usage Example",
+        description: "A short description goes here."
+      }}
+    />
     <h1>Beers!</h1>
     <ul>
       {props.beers.map(beer => (
@@ -49,7 +56,9 @@ const Index = props => (
 );
 
 Index.getInitialProps = async function() {
-  const res = await fetch("https://api.punkapi.com/v2/beers?page=2&per_page=80");
+  const res = await fetch(
+    "https://api.punkapi.com/v2/beers?page=2&per_page=80"
+  );
   const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);

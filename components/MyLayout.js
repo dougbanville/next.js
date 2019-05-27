@@ -9,6 +9,7 @@ const layoutStyle = {
 
 const Layout = props => (
   <div style={layoutStyle}>
+    <h1>Every</h1>
     <Header />
     {props.children}
   </div>
