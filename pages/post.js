@@ -12,7 +12,7 @@ const Post = props => (
         description: props.beer.tagline,
         canonical: "https://hello-next.dougbanville.now.sh/",
         openGraph: {
-          url: "https://www.url.ie/a",
+          url: "https://hello-next.dougbanville.now.sh/",
           title: props.beer.name,
           description: props.beer.tagline,
           images: [{ url: props.beer.image_url }],

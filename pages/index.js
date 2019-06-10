@@ -2,7 +2,9 @@ import Layout from "../components/MyLayout.js";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import MyBeer from "../components/MyBeer";
+import BeerList from "../components/MyBeer";
 import NextSeo from "next-seo";
+import css from "../styles.scss";
 
 const Index = props => (
   <Layout>
@@ -14,16 +16,13 @@ const Index = props => (
     />
     <h1>Beers!</h1>
     <div className="grid-container">
-      {props.beers.map(beer => (
-        <div className="grid-x grid-margin-x" key={beer.id}>
-          <div className="cell small-12 large-6" key={beer.id}>
-            <img src={`${beer.image_url}`} />
-            <Link as={`/p/${beer.id}`} href={`/post?id=${beer.id}`}>
-              <a>{beer.name}</a>
-            </Link>
+      <div className="grid-x grid-margin-x">
+        {props.beers.map(beer => (
+          <div className="cell small-12 large-4" key={beer.id}>
+            <MyBeer beer={beer} />
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
     <style jsx>{`
       img {
@@ -58,9 +57,7 @@ const Index = props => (
 );
 
 Index.getInitialProps = async function() {
-  const res = await fetch(
-    "https://api.punkapi.com/v2/beers?page=2&per_page=80"
-  );
+  const res = await fetch("https://api.punkapi.com/v2/beers?page=2&per_page=80");
   const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);
